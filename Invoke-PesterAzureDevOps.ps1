@@ -1,3 +1,4 @@
+import-module Az.Accounts
 Install-Module -Name Pester -Force -SkipPublisherCheck
 Import-Module Pester
 $outputfile=".\Test-Results.xml"
