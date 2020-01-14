@@ -1,3 +1,4 @@
+Install-Module -Name Az.Accounts
 import-module Az.Accounts
 Install-Module -Name Pester -Force -SkipPublisherCheck
 Import-Module Pester
