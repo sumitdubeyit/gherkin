@@ -13,7 +13,7 @@ steps:
 - powershell: ./Invoke-PesterAzureDevOps.ps1
   displayName: 'Run Pester'
 
-- task: PublishTestResult@2
+- task: PublishTestResults@2
   displayName: Publish Test Results
   inputs:
     testRunTitle: 'Test Results for Pester'
