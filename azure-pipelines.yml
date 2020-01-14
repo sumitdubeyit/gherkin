@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+steps:
+- script: ./Invoke-PesterAzureDevOps.ps1
+  displayName: 'Run Pester'
+
+- task: PublishTestResult@2
+  displayName: Publish Test Results
+  inputs:
+    testRunTitle:-'Test Results for Pester'
+    buildPlatform:-'Windows'
+    testRunner:-'Nunit'
+    testResultsFiles:-'./Test-Results.xml'
