@@ -12,7 +12,11 @@ pool:
 steps:
 - powershell: ./Invoke-PesterAzureDevOps.ps1
   displayName: 'Run Pester'
-
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: 'Azure Pass - Sponsorship (30678e5f-894b-4c7e-837e-02a50079054e)'
+    ScriptType: 'FilePath'
+    azurePowerShellVersion: 'LatestVersion'
 - task: PublishTestResults@2
   displayName: Publish Test Results
   inputs:
