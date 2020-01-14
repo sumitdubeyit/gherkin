@@ -1,6 +1,8 @@
 Given "the deployment is successful" {}
-Then "the machine has 4 CPU Logical Processors" {
-(Get-CimInstance win32_processor).numberofLogicalProcessors | Should -Be 8 }
-And "8GB of RAM" {
- (Get-CimInstance win32_processor).MAXCLOCKSPEED| Should -BeGreaterThan 1500
- }
+Then "the RG name should be SQL" {
+Get-AzResourceGroup |?{$_.ResourceGroupName -eq "SQL"}|select ResourceGroupName -ExpandProperty ResourceGroupName |Should -Be "SQL" 
+
+}
+And "RG Location is East US" {
+    (Get-AzResourceGroup |?{$_.Location -eq "EastUS"}).Location | should -Be "eastus"
+}
