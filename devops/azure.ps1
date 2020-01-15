@@ -1,3 +1,3 @@
 Install-Module -Name Pester -Force -SkipPublisherCheck
 Import-Module Pester
-Invoke-Gherkin -path devops\
+Invoke-Gherkin -path "D:\a\1\s\devops"
