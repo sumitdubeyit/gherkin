@@ -1,3 +1,3 @@
-(gci $build).Directoryname
+(gci $build).Directoryname | select first
 
 
