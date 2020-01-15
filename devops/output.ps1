@@ -1,4 +1,4 @@
-$result=$build.ArtifactStagingDirectory
-(gci $result).Directory
+gci "$build.ArtifactStagingDirectory"
+
 
 
