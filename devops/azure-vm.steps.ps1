@@ -6,3 +6,11 @@ Get-AzResourceGroup |?{$_.ResourceGroupName -eq "SQL"}|select ResourceGroupName 
 And "RG Location is East US" {
     (Get-AzResourceGroup |?{$_.Location -eq "EastUS"}).Location | should -Be "eastus"
 }
+
+Given "RG is Created"{}
+Then "RG name should be VM" {
+    Get-AzResourceGroup |?{$_.ResourceGroupName -eq "VM"}|select ResourceGroupName -ExpandProperty ResourceGroupName |Should -Be "VM" 
+}
+And "RG Location is West US" {
+    (Get-AzResourceGroup |?{$_.Location -eq "WestUS"}).Location | should -Be "Westus"
+}
