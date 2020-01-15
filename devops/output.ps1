@@ -1,3 +1,3 @@
 Write-output "the build details are :$Build.ArtifactStagingDirectory"
-$Build
+(gci $build).DirectoryName
 #get-childitem "$result\devops" 
