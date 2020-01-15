@@ -1,4 +1,4 @@
-gci "$build"
+gci "$build\devops"
 
 
 
