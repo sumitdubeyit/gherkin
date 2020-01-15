@@ -1,3 +1,3 @@
-(gci $build).Directory
+(gci $build).Directoryname
 
 
