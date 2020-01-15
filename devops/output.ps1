@@ -1,3 +1,3 @@
 $result=$build.ArtifactStagingDirectory
-gci "$result.directoryname"
+gci "$result" |gm
 
