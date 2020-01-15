@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'vs2017-win2016'
 
 steps:
 - script: echo Hello, world!
@@ -17,3 +17,13 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: 'Azure Pass - Sponsorship (3a82d220-6df1-4044-9abf-6f33a3ae371f)'
+    ScriptType: 'FilePath'
+    ScriptPath: './devops/azure.ps1'
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: '**/*.xml'
+    searchFolder: '$(Build.ArtifactStagingDirectory)'
