@@ -22,6 +22,7 @@ steps:
     azureSubscription: 'Azure Pass - Sponsorship (3a82d220-6df1-4044-9abf-6f33a3ae371f)'
     ScriptType: 'FilePath'
     ScriptPath: './devops/azure.ps1'
+    azurePowerShellVersion: 'LatestVersion'
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'NUnit'
