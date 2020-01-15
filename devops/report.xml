@@ -1,67 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
--<test-results time="15.27.49" date="2020-01-15" invalid="0" skipped="0" ignored="0" inconclusive="1" not-run="0" failures="1" errors="0" total="3" name="Pester" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-<environment clr-version="4.0.30319.42000" os-version="10.0.14393" nunit-version="2.5.8.0" platform="Microsoft Windows Server 2016 Standard Evaluation|C:\Windows|\Device\Harddisk0\Partition2" user-domain="SCG" cwd="D:\Scripts" machine-name="SRV2016" user="administrator"/>
-
-<culture-info current-uiculture="en-US" current-culture="en-US"/>
-
-
--<test-suite time="1.4111" name="Pester" description="Pester" asserts="0" success="False" result="Failure" executed="True" type="TestFixture">
-
-
--<results>
-
-
--<test-suite time="1.4111" name="Create Application for myApp" description="Create Application for myApp" asserts="0" success="True" result="Success" executed="True" type="TestFixture">
-
-
--<results>
-
-
--<test-suite time="1.1831" name="Application Server Resources" description="Application Server Resources" asserts="0" success="True" result="Success" executed="True" type="TestFixture">
-
-
--<results>
-
-<test-case time="0.0007" name="Application Server Resources.Given the deployment is successful" description="Given the deployment is successful" asserts="0" success="True" result="Success" executed="True"/>
-
-
--<test-case time="0.548" name="Application Server Resources.Then the RG name should be SQL" description="Then the RG name should be SQL" asserts="0" success="False" result="Failure" executed="True">
-
-
--<failure>
-
-<message>Expected 'SQL', but got $null.</message>
-
-<stack-trace>at <ScriptBlock>, D:\Scripts\azure-vm.steps.ps1: line 3 3: Get-AzResourceGroup |?{$_.ResourceGroupName -eq "SQL"}|select ResourceGroupName -ExpandProperty ResourceGroupName |Should -Be "SQL" From D:\Scripts\azure-vm.feature: line 6</stack-trace>
-
-</failure>
-
-</test-case>
-
-
--<test-case time="0" name="Application Server Resources.And RG Location is East US" description="And RG Location is East US" asserts="0" success="False" result="Inconclusive" executed="True">
-
-
--<reason>
-
-<message>Step skipped (previous step did not pass)</message>
-
-</reason>
-
-</test-case>
-
-</results>
-
-</test-suite>
-
-</results>
-
-</test-suite>
-
-</results>
-
-</test-suite>
-
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="3" errors="0" failures="1" not-run="0" inconclusive="1" ignored="0" skipped="0" invalid="0" date="2020-01-15" time="15.27.49">
+  <environment user="administrator" machine-name="SRV2016" cwd="D:\Scripts" user-domain="SCG" platform="Microsoft Windows Server 2016 Standard Evaluation|C:\Windows|\Device\Harddisk0\Partition2" nunit-version="2.5.8.0" os-version="10.0.14393" clr-version="4.0.30319.42000" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Failure" success="False" time="1.4111" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="Create Application for myApp" executed="True" result="Success" success="True" time="1.4111" asserts="0" description="Create Application for myApp">
+        <results>
+          <test-suite type="TestFixture" name="Application Server Resources" executed="True" result="Success" success="True" time="1.1831" asserts="0" description="Application Server Resources">
+            <results>
+              <test-case description="Given the deployment is successful" name="Application Server Resources.Given the deployment is successful" time="0.0007" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Then the RG name should be SQL" name="Application Server Resources.Then the RG name should be SQL" time="0.548" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Expected 'SQL', but got $null.</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, D:\Scripts\azure-vm.steps.ps1: line 3
+3: Get-AzResourceGroup |?{$_.ResourceGroupName -eq "SQL"}|select ResourceGroupName -ExpandProperty ResourceGroupName |Should -Be "SQL" 
+From D:\Scripts\azure-vm.feature: line 6</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="And RG Location is East US" name="Application Server Resources.And RG Location is East US" time="0" asserts="0" success="False" result="Inconclusive" executed="True">
+                <reason>
+                  <message>Step skipped (previous step did not pass)</message>
+                </reason>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
 </test-results>
