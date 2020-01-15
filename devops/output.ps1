@@ -1,4 +1,4 @@
-gci "$build.ArtifactStagingDirectory"
+gci "$build"
 
 
 
