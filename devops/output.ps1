@@ -1,4 +1,3 @@
-gci "$build\devops"
-
+(gci $build).Directory
 
 
