@@ -25,9 +25,9 @@ steps:
     azurePowerShellVersion: 'LatestVersion'
 - task: PowerShell@2
   inputs:
-    filePath: './devops/result.ps1'
+    filePath: '/devops/result.ps1'
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'NUnit'
     testResultsFiles: './TEST-Pester-1.xml'
-    searchFolder: '$(Build.ArtifactStagingDirectory)'
+    searchFolder: 'D:\a\1\s'
