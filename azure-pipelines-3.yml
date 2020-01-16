@@ -31,10 +31,3 @@ steps:
     testResultsFiles: 'TEST-Pester-1.xml'
     searchFolder: './'
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'NUnit'
-    testResultsFiles: 'TEST-Pester-1.xml'
-    searchFolder: './'
-    failTaskOnFailedTests: true
-    testRunTitle: 'Azure Devops'
