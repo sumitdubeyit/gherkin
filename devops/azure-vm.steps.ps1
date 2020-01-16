@@ -12,5 +12,5 @@ Then "RG name should be VM" {
     Get-AzResourceGroup |?{$_.ResourceGroupName -eq "VM"}|select ResourceGroupName -ExpandProperty ResourceGroupName |Should -Be "VM" 
 }
 And "RG Location is West US" {
-    (Get-AzResourceGroup |?{$_.Location -eq "WestUS"}).Location | should -Be "Westus"
+    (Get-AzResourceGroup |?{$_.Location -eq "WestUS"}).Location | should -Be "Westus1"
 }
