@@ -25,3 +25,8 @@ steps:
     ScriptPath: './devops/azure.ps1'
     azurePowerShellVersion: 'LatestVersion'
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: 'TEST-Pester-1.xml'
+    searchFolder: './'
